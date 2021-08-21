@@ -1,3 +1,5 @@
+// import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from "constants";
+
 export class Satellite {
 
 	name: string;
@@ -12,13 +14,28 @@ export class Satellite {
 		this.launchDate = launchDate;
 		this.orbitType = orbitType;
 		this.operational = operational;
-   }
-	
-	isSpaceDebris(): boolean {
-		
-		return true;
-   }
+	}
 
+	isSpaceDebris(): boolean {
+		//let spaceDebris = 'Space Debris';
+		// if (this.type.includes(spaceDebris)) {
+		// 	return true;
+		// } else {
+		// 	return false;
+		// }
+
+		// if (this.type === 'Space Debris') {
+		// 	return true;
+		//  } else {
+		// 	return false;
+		//  }
+
+		return this.type === "Space Debris";
+
+	}
 }
+
+	
+
 
 // TODO 3a: fix isSpaceDebris check
